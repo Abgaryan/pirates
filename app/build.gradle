@@ -4,7 +4,7 @@ project.ext {
     appcompat = "1.1.0-alpha01"
     constraintlayout = "2.0.0-alpha3"
     retrofit = "2.5.0"
-    dagger_version = "2.15"
+    dagger_version = "2.21"
     butter_knife = "10.0.0"
     rx_java = "2.2.5"
     rx_android = "2.1.0"
@@ -12,6 +12,7 @@ project.ext {
     junit = "4.12"
     runner = "1.1.1"
     espresso_core = "3.1.1"
+    rxjava2_adapter = "1.0.0"
 
 }
 
@@ -59,13 +60,13 @@ dependencies {
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$project.retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$project.retrofit"
+    implementation  "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$project.rxjava2_adapter"
 
     // Dagger
     annotationProcessor "com.google.dagger:dagger-android-processor:$project.dagger_version"
     annotationProcessor "com.google.dagger:dagger-compiler:$project.dagger_version"
     implementation "com.google.dagger:dagger:$project.dagger_version"
     implementation "com.google.dagger:dagger-android:$project.dagger_version"
-    implementation "com.google.dagger:dagger-android-support:$project.dagger_version"
 
 
     testImplementation "junit:junit:$project.junit"
