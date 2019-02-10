@@ -26,9 +26,6 @@ public class PostAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private static final int FOOTER_ADAPTER = 2;
 
 
-
-    private RecyclerView.ViewHolder holder;
-    private int position;
     private  List<Post> mPostList;
     private  boolean  mIsLoading = false;
 

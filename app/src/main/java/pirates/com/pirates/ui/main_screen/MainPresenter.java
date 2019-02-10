@@ -123,7 +123,7 @@ public class MainPresenter implements MainContract.Presenter, Provider<MainPrese
 
     @Override
     public void onItemClicked(int postId, int userId) {
-
+        mMainView.navigateToPostDetail(postId, userId);
     }
 
     private void loadCurrentPagePosts(Observer<List<Post>> observer) {

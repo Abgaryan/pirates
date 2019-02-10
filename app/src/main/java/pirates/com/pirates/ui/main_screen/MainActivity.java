@@ -1,5 +1,6 @@
 package pirates.com.pirates.ui.main_screen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -15,8 +16,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import pirates.com.pirates.PirateApplication;
 import pirates.com.pirates.R;
+import pirates.com.pirates.comman.Constants;
 import pirates.com.pirates.comman.DialogHelper;
 import pirates.com.pirates.model.Post;
+import pirates.com.pirates.ui.detail_screen.DetailActivity;
 
 import static pirates.com.pirates.comman.Constants.LIST_PAGE_LIMIT;
 
@@ -145,7 +148,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
     @Override
     public void navigateToPostDetail(int postId, int userId) {
-
+        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+        intent.putExtra(Constants.POST_ID, postId);
+        intent.putExtra(Constants.USER_ID, userId);
+        startActivity(intent);
     }
 
 }

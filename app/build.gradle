@@ -13,6 +13,7 @@ project.ext {
     runner = "1.1.1"
     espresso_core = "3.1.1"
     rxjava2_adapter = "1.0.0"
+    picasso = "2.71828"
 
 }
 
@@ -47,8 +48,6 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$project.support"
     implementation "androidx.cardview:cardview:$project.support"
 
-
-
     // Rx java
     implementation "io.reactivex.rxjava2:rxjava:$project.rx_java"
     implementation "io.reactivex.rxjava2:rxandroid:$project.rx_android"
@@ -60,13 +59,17 @@ dependencies {
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$project.retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$project.retrofit"
-    implementation  "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$project.rxjava2_adapter"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$project.rxjava2_adapter"
 
     // Dagger
     annotationProcessor "com.google.dagger:dagger-android-processor:$project.dagger_version"
     annotationProcessor "com.google.dagger:dagger-compiler:$project.dagger_version"
     implementation "com.google.dagger:dagger:$project.dagger_version"
     implementation "com.google.dagger:dagger-android:$project.dagger_version"
+
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$project.picasso"
 
 
     testImplementation "junit:junit:$project.junit"
